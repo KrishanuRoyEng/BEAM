@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --cyan-oled: #00E5FF;
+  --green-oled: #00FF9D;
+  --magenta-oled: #FF00E5;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cyan-oled: var(--cyan-oled);
+  --color-green-oled: var(--green-oled);
+  --color-magenta-oled: var(--magenta-oled);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+  overflow-x: hidden;
+}
+
+.oled-border {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+}
+
+.glow-green {
+  text-shadow: 0 0 12px rgba(0, 255, 157, 0.5);
+}
+
+.glow-magenta {
+  text-shadow: 0 0 12px rgba(255, 0, 229, 0.5);
+}
+
+.clinical-grid {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1.5px, transparent 1.5px);
+  background-size: 80px 80px;
+}
